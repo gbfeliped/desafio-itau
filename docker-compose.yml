@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    image: gradle:8.7-jdk21
+    container_name: springboot_app
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: gradle bootRun
+    ports:
+      - "8080:8080"
