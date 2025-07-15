@@ -1,4 +1,4 @@
-package com.itau.challenge.API.Repository;
+package com.itau.challenge.API.repository;
 
 import com.itau.challenge.API.model.Transaction;
 import org.springframework.stereotype.Repository;
@@ -10,9 +10,8 @@ import java.util.List;
 public class TransactionRepository {
   private final List<Transaction> transactions = new ArrayList<>();
 
-  public Transaction save(Transaction transaction) {
+  public void save(Transaction transaction) {
     transactions.add(transaction);
-    return transaction;
   }
 
   public List<Transaction> findAll() {

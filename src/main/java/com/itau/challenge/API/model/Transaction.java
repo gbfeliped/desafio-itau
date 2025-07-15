@@ -23,13 +23,7 @@ public class Transaction {
   public double getValor() {
     return valor;
   }
-  public void setValor(double valor) {
-    this.valor = valor;
-  }
   public Date getDataHora() {
     return dataHora;
-  }
-  public void setDataHora(Date dataHora) {
-    this.dataHora = dataHora;
   }
 }
