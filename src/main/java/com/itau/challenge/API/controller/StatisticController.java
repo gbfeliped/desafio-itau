@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class StatisticController {
     private final TransactionService service;
 
-    public  StatisticController(TransactionService service) {
+    public StatisticController(TransactionService service) {
         this.service = service;
     }
 
