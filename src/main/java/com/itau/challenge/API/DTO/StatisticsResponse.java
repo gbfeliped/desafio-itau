@@ -1,18 +1,20 @@
-package com.itau.challenge.API.model;
+package com.itau.challenge.API.DTO;
 
-public class Statistic {
+import java.util.DoubleSummaryStatistics;
+
+public class StatisticsResponse {
     private long count = 0;
     private double sum = 0;
     private double avg = 0;
     private double min = 0;
     private double max = 0;
 
-    public Statistic(long count, double sum, double avg, double min, double max) {
-        this.count = count;
-        this.sum = Double.isFinite(sum) ? sum : 0;
-        this.avg = Double.isFinite(avg) ? avg : 0;
-        this.min = Double.isFinite(min) ? min : 0;
-        this.max = Double.isFinite(max) ? max : 0;
+    public StatisticsResponse(DoubleSummaryStatistics stats) {
+        this.count = stats.getCount();
+        this.sum = stats.getSum();
+        this.avg = stats.getAverage();
+        this.min = stats.getMin();
+        this.max = stats.getMax();
     }
 
     public long getCount() {

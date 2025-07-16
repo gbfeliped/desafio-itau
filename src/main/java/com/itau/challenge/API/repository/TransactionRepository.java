@@ -15,7 +15,7 @@ public class TransactionRepository {
   }
 
   public List<Transaction> findAll() {
-    return new ArrayList<>(transactions);
+    return transactions;
   }
 
   public void deleteAll() {
